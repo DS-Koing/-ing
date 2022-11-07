@@ -1,4 +1,4 @@
-package src.main.java.com.example.ing.controller;
+package com.example.ing.controller;
 
 import java.util.Map;
 import io.swagger.annotations.ApiOperation;

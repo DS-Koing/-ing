@@ -1,11 +1,16 @@
 package com.example.ing.data.dao.impl;
+// 확인용 Product
 
+import com.example.ing.data.dao.ProductDAO;
 import com.example.ing.data.entity.Product;
 import com.example.ing.data.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
+import java.util.Optional;
+
 // DAD-클래스는 '인터페이스-구현체'구성으로 생성함
-public class ProductImpl implements ProductDAO{
+public class ProductDAOImpl implements ProductDAO {
     private ProductRepository productRepository;
 
     @Autowired
@@ -13,7 +18,6 @@ public class ProductImpl implements ProductDAO{
         this.productRepository = productRepository;
     }
 
-  
     @Override
     public Product insertProduct(Product product) {
         Product savedProduct = productRepository.save(product);
@@ -21,14 +25,12 @@ public class ProductImpl implements ProductDAO{
         return savedProduct;
     }
 
-
     @Override
     public Product selectProduct(Long number) {
         Product selectedProduct = productRepository.getById(number);
 
         return selectedProduct;
     }
-
 
     @Override
     public Product updateProductName(Long number, String name) throws Exception {
@@ -49,7 +51,6 @@ public class ProductImpl implements ProductDAO{
         return updatedProduct;
     }
 
-
     @Override
     public void deleteProduct(Long number) throws Exception {
         Optional<Product> selectedProduct = productRepository.findById(number);
@@ -62,4 +63,5 @@ public class ProductImpl implements ProductDAO{
             throw new Exception();
         }
     }
+
 }

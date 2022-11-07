@@ -19,6 +19,7 @@ public class SwaggerConfiguration {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.springboot.api"))
+                .apis(RequestHandlerSelectors.basePackage("com.springboot.jpa")) //추가 작성
                 .paths(PathSelectors.any())
                 .build();
     }
