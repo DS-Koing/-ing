@@ -14,12 +14,29 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfiguration {
     @Bean
+    /*
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.springboot.api"))
-                .apis(RequestHandlerSelectors.basePackage("com.springboot.jpa")) //추가 작성
+                .paths(PathSelectors.any())
+                .build();
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("Spring Boot Open API Test with Swagger")
+                .description("설명 부분")
+                .version("1.0.0")
+                .build();
+    }
+    */
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.springboot.jpa"))
                 .paths(PathSelectors.any())
                 .build();
     }
