@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/get-api")
+@RequestMapping("/product")
+//@RequestMapping("/api/v1/get-api")
 public class GetController {
     //로그 출력 코드
     private final Logger LOGGER = LoggerFactory.getLogger(GetController.class);

@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/put-api")
+@RequestMapping("/product")
+//@RequestMapping("/api/v1/put-api")
 public class PutController {
 
     @PutMapping(value = "/default")

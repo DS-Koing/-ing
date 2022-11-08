@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/post-api")
+@RequestMapping("/product")
+//@RequestMapping("/api/v1/post-api")
 public class PostController {
     @RequestMapping(value = "/domain", method = RequestMethod.POST)
     public String postExample(){
