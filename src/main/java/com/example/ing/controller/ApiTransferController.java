@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-// 프론트 완성 이전 확인용
+// 프론트 완성 이전 확인용 - entity User2 (사용하려면 2 지워야 함)
 /*
 public class ApiTransferController {
     @GetMapping(value = "/user", produces = MediaType.APPLICATION_JSON_VALUE)
